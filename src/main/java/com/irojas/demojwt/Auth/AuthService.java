@@ -35,9 +35,9 @@ public class AuthService {
     public AuthResponse register(RegisterRequest request) {
         User user = User.builder()
             .username(request.getUsername())
-            .password(passwordEncoder.encode( request.getPassword()))
+            .password(passwordEncoder.encode(request.getPassword()))
             .firstname(request.getFirstname())
-            .lastname(request.lastname)
+            .lastname(request.getLastname())
             .country(request.getCountry())
             .role(Role.USER)
             .build();
